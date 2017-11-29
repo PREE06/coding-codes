@@ -1,0 +1,26 @@
+#Ask user for the scaling factor
+scale = int(input("Enter the scaling factor: "))
+
+#Verify the scaling factor input
+while scale <= 1:
+    print("Invalid scale, the scaling value is >= 1")
+    scale = int(input("Enter the scaling factor: "))
+
+#Prints first set of dashes
+print(' ', end=' ')
+for dashes in range(scale):
+    print('-', end='')
+
+#Prints the lines
+print()
+for lines in range(scale):
+    print(' ', end='')
+
+#Seperates two lines
+    print('|', '|', sep=' ' * scale)
+print(' ', end='')
+
+#Prints second set of dashes
+print(' ', end='')
+for dashes in range(scale):
+    print('-', end='')
