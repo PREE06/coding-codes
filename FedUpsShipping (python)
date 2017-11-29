@@ -1,0 +1,31 @@
+#User inputs the length, width & height
+length = int(input("Enter the length of the package: "))
+width = int(input("Enter the width of the package: "))
+height = int(input("Enter the height of the package: "))
+
+#Calculates the volume with the volume formula
+volume = length * width * height
+
+#Gets the volume cost from the given inputs
+if volume < 2000: 
+    volumeCost = volume * 0.003
+elif volume > 2000 and volume < 6000:
+    volumeCost = volume * 0.004
+else: volume > 6000
+volumeCost = volume * 0.008
+
+#User inputs the weight
+weight = int(input("Enter the weight of the package: "))
+
+#Gets the weight cost from the given inputs
+if weight < 5:
+    weightCost = weight * 3
+elif weight <= 10:
+    weightCost = weight * 4
+else: weight > 10
+weightCost = weight * 6
+
+if weightCost > volumeCost:
+    print('Your shipping cost is $', volumeCost, '.', 'This is based on volume.')
+else:
+    print('Your shipping cost is $', weightCost, '.', 'This is based on weight.')
