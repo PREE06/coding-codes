@@ -1,0 +1,30 @@
+def main():
+
+#Initializes words list
+    wordsList = []
+
+#Opens the words.txt file
+    file = open('words.txt', 'r')
+
+#The user enters a sentence
+    sentence = input('Please enter a scentence: ')
+
+#Splits the words into another list & initalizes the list
+    sentence = sentence.split()
+
+#Strips the lines & adds words
+    for line in file:
+        wordsList.append(line.rstrip())
+
+#Prints the misspelled words in the list        
+    print('The words below are misspelled:')
+    
+    for words in sentence:
+        if words not in wordsList:
+            print(words)
+
+#Closes the files
+    file.close()
+
+#Calls the main function
+main()
