@@ -1,0 +1,20 @@
+#Get the length and width of the first rectangle
+width1 = int(input('Enter the width of the first rectangle: '))
+length1 = int(input('Enter the length of the first rectangle: '))
+
+#Get the length and width of the second rectangle
+width2 = int(input('Enter the width of the second rectangle: '))
+length2 = int(input('Enter the length of the second rectangle: '))
+
+#Calculates the area for both rectangles
+area1 = width1 * length1
+area2 = width2 * length2
+
+
+#Prints which rectangle is bigger or if they are equal
+if area1 > area2:
+    print("The first rectangle is bigger.")
+elif area1 < area2:
+    print("The second rectangle is bigger.")
+else:
+    print("The rectangles are the same.")
