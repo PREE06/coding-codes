@@ -1,0 +1,20 @@
+#User enters a number from 1 through 7
+dayNumber = int(input("Enter a number from 1 through 7: "))
+
+#Prints out the corresponding Day to the number that was entered.
+if dayNumber == 1:
+    print("Monday")
+elif dayNumber == 2:
+    print("Tuesday")
+elif dayNumber == 3:
+    print("Wednesday")
+elif dayNumber == 4:
+    print("Thursday")
+elif dayNumber == 5:
+    print("Friday")
+elif dayNumber == 6:
+    print("Saturday")
+elif dayNumber == 7:
+    print("Sunday")
+else:
+    print("Error, invalid input. Enter a number from 1 through 7.")
