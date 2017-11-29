@@ -1,0 +1,73 @@
+def printMenu():
+    print()
+    print('a - Add an Item')
+    print('r - Remove an Item')
+    print('s - Sort Shopping List')
+    print('p - Print Shopping List')
+    print('q - Quit')
+    print()
+
+#Global constant
+SHOPPING_LIST = []
+
+
+#Defines the main 
+def main():
+
+#Assign selection to empty string 
+    selection = ''
+
+#While selection does not equal q
+    while selection != 'q':
+        try:
+            
+#Call print menu function
+            printMenu()
+
+#User inputs a choice from menu
+            selection = input('Please enter your choice: ')
+
+            if selection == 'a':
+                add()
+            elif selection == 'r':
+                remove()
+            elif selection == 's':
+                sort()
+            elif selection == 'p':
+                printing()
+            elif selection != 'q':
+                print('Invalid selection!')
+
+#Prints error if anything other than menu letters are input by user
+        except ValueError:
+            print('Invalid selection!')
+            
+#Exits the program
+    exit
+
+#Adds items to the list        
+def add():
+    adding = input('Add an Item: ')
+    SHOPPING_LIST.append(adding)
+
+#Removes an item that is not longer wanted on list
+def remove():
+    removing = input('Remove an Item: ')
+    if removing in SHOPPING_LIST:
+       SHOPPING_LIST.remove(removing)
+    else:
+        print('Item not in list.')
+
+#Sorts the list in alphabetical order
+def sort():
+    SHOPPING_LIST.sort()
+
+#Prints items with a numbered list (counter increments)
+def printing():
+    counter = 0
+    for item in SHOPPING_LIST:
+        counter += 1
+        print(counter, item)
+
+#Calls the main function
+main()
